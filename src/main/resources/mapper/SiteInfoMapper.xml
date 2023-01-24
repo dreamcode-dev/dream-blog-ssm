@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="io.dreamcode.mapper.SiteInfoMapper">
+
+    <resultMap id="siteInfo" type="io.dreamcode.pojo.SiteInfo">
+        <id property="id" column="id"/>
+        <result property="siteName" column="site_name"/>
+        <result property="power" column="power"/>
+        <result property="copyright" column="copyright"/>
+        <result property="brand" column="brand"/>
+        <result property="favicon" column="favicon"/>
+        <result property="header" column="header"/>
+    </resultMap>
+
+    <select id="getSiteInfo" resultMap="siteInfo">
+        select *
+        from dream_blog_site_info
+    </select>
+</mapper>

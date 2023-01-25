@@ -15,6 +15,6 @@ public class InitTest {
 
     @Test
     public void initTest() {
-        System.out.println(mapper.getAll());
+        System.out.println(mapper.getAllArticles());
     }
 }

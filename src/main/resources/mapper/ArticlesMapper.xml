@@ -5,7 +5,10 @@
 
 
 <mapper namespace="io.dreamcode.mapper.ArticlesMapper">
-    <select id="getAll" resultType="io.dreamcode.pojo.Article">
+    <select id="getAllArticles" resultType="io.dreamcode.pojo.Article">
         select * from dream_blog_articles
+    </select>
+    <select id="getAllArticlesCount" resultType="integer">
+        select count(*) from dream_blog_articles
     </select>
 </mapper>

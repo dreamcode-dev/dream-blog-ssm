@@ -8,11 +8,12 @@ public class SiteInfo {
     private String brand;
     private String favicon;
     private String header;
+    private String notice;
 
     public SiteInfo() {
     }
 
-    public SiteInfo(Integer id, String siteName, String power, String copyright, String brand, String favicon, String header) {
+    public SiteInfo(Integer id, String siteName, String power, String copyright, String brand, String favicon, String header, String notice) {
         this.id = id;
         this.siteName = siteName;
         this.power = power;
@@ -20,6 +21,7 @@ public class SiteInfo {
         this.brand = brand;
         this.favicon = favicon;
         this.header = header;
+        this.notice = notice;
     }
 
     public Integer getId() {
@@ -76,6 +78,14 @@ public class SiteInfo {
 
     public void setHeader(String header) {
         this.header = header;
+    }
+
+    public String getNotice() {
+        return notice;
+    }
+
+    public void setNotice(String notice) {
+        this.notice = notice;
     }
 
     @Override

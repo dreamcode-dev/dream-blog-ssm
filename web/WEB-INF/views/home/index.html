@@ -7,7 +7,7 @@
     <link th:href="@{/static/css/halfmoon-variables.min.css}" rel="stylesheet">
     <link rel="stylesheet" th:href="@{/static/font-awesome/css/font-awesome.min.css}">
 </head>
-<body>
+<body class="dark-mode">
 
 <div th:insert="~{/public/header}" class="with-navbar  position-fixed z-50 w-full"/>
 
@@ -32,7 +32,7 @@
                     <p th:if="${#strings.length(article.content) >= 200}" th:text="${#strings.substring(article.content, 0, 200) + '...'}"></p>
                     <p th:if="${#strings.length(article.content) <= 200}" th:text="${article.content}  + '...'"></p>
                     <div class="text-right"> <!-- text-right = text-align: right -->
-                        <a href="#" class="btn">Read more</a>
+                        <a th:href="@{'/articles/' + ${article.id}}" class="btn">阅读更多</a>
                     </div>
                 </div>
             </div>

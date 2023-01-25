@@ -17,4 +17,6 @@ public interface ArticlesService {
 
     // 分页数据
     Map<String, Object> pageData(Integer pageIndex);
+
+    Article getArticleById(Integer articleId);
 }

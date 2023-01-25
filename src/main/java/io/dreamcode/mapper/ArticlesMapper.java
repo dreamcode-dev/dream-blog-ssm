@@ -9,4 +9,6 @@ public interface ArticlesMapper {
     List<Article> getAllArticles();
 
     Integer getAllArticlesCount();
+
+    Article getArticleById(@Param("articleId") Integer articleId);
 }

@@ -4,7 +4,6 @@ import com.github.pagehelper.PageHelper;
 import io.dreamcode.mapper.ArticlesMapper;
 import io.dreamcode.pojo.Article;
 import io.dreamcode.service.ArticlesService;
-import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -43,4 +42,10 @@ public class ArticlesServiceImpl implements ArticlesService {
         pageData.put("articleData", articlesMapper.getAllArticles());
         return pageData;
     }
+
+    @Override
+    public Article getArticleById(Integer articleId) {
+        return articlesMapper.getArticleById(articleId);
+    }
+
 }

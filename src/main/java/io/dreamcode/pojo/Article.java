@@ -7,21 +7,21 @@ public class Article {
     private String title;
     private String content;
     private String markdown;
-    private String categoryIds;
-    private String tagIds;
+    private String categoryId;
+    private String tagId;
     private Date postTime;
     private Date updateTime;
 
     public Article() {
     }
 
-    public Article(Integer id, String title, String content, String markdown, String categoryIds, String tagIds, Date postTime, Date updateTime) {
+    public Article(Integer id, String title, String content, String markdown, String categoryId, String tagId, Date postTime, Date updateTime) {
         this.id = id;
         this.title = title;
         this.content = content;
         this.markdown = markdown;
-        this.categoryIds = categoryIds;
-        this.tagIds = tagIds;
+        this.categoryId = categoryId;
+        this.tagId = tagId;
         this.postTime = postTime;
         this.updateTime = updateTime;
     }
@@ -58,20 +58,20 @@ public class Article {
         this.markdown = markdown;
     }
 
-    public String getCategoryIds() {
-        return categoryIds;
+    public String getCategoryId() {
+        return categoryId;
     }
 
-    public void setCategoryIds(String categoryIds) {
-        this.categoryIds = categoryIds;
+    public void setCategoryId(String categoryId) {
+        this.categoryId = categoryId;
     }
 
-    public String getTagIds() {
-        return tagIds;
+    public String getTagId() {
+        return tagId;
     }
 
-    public void setTagIds(String tagIds) {
-        this.tagIds = tagIds;
+    public void setTagId(String tagId) {
+        this.tagId = tagId;
     }
 
     public Date getPostTime() {
@@ -97,8 +97,8 @@ public class Article {
                 ", title='" + title + '\'' +
                 ", content='" + content + '\'' +
                 ", markdown='" + markdown + '\'' +
-                ", categoryIds='" + categoryIds + '\'' +
-                ", tagIds='" + tagIds + '\'' +
+                ", categoryId='" + categoryId + '\'' +
+                ", tagId='" + tagId + '\'' +
                 ", postTime=" + postTime +
                 ", updateTime=" + updateTime +
                 '}';

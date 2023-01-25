@@ -11,4 +11,10 @@
     <select id="getAllArticlesCount" resultType="integer">
         select count(*) from dream_blog_articles
     </select>
+    <select id="getArticleById" resultType="io.dreamcode.pojo.Article">
+        select * from dream_blog_articles
+        <where>
+            id = #{articleId}
+        </where>
+    </select>
 </mapper>
